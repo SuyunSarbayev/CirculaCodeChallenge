@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-parcelize'
+}
+
+apply from: "../dependencies.gradle"
+
+android {
+    namespace 'com.example.core'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    api project.core.values()
+    api project.kotlin_bom.values()
+    api project.compose_bom.values()
+    api project.android.values()
+    api project.compose.values()
+    api project.gson.values()
+    api project.retrofit.values()
+    api project.okHttp.values()
+    api project.navigation.values()
+    api project.hilt.hilt_compose
+    api project.hilt.hilt_android
+    api project.pagination.values()
+    api project.coil.values()
+
+    kapt project.hilt.hilt_compiler
+
+    api project.dagger_android.dagger
+    api project.dagger_android.dagger_support
+    kapt project.dagger_android.dagger_processor
+
+    api project.dagger_core.dagger
+    kapt project.dagger_core.dagger_compiler
+
+    testImplementation project.test.values()
+
+    androidTestImplementation project.android_test.values()
+    androidTestImplementation project.compose_bom.values()
+
+    debugImplementation project.debug.values()
+}

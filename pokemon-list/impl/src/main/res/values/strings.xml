@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pokemons_list_search_empty_title">No pokemons found</string>
+    <string name="pokemons_list_search_empty_subtitle">Sorry we can not find pokemons that matching your request</string>
+    <string name="pokemons_list_search_reload_page">Reload page</string>
+</resources>

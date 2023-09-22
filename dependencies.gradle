@@ -1,0 +1,140 @@
+ext {
+    versions = [
+            core              : "1.10.1",
+            junit             : "4.13.2",
+            android_test_junit: "1.1.5",
+            espresso_core     : "3.5.1",
+            appcompat         : "1.6.1",
+            lifecycle         : "2.6.1",
+            activity_compose  : "1.7.2",
+            compose_bom       : "2022.10.00",
+            kotlin_bom        : "1.8.0",
+            compose           : "1.4.3",
+            compose_material3 : "1.2.0-alpha02",
+            retrofit          : "2.9.0",
+            okHttp            : "4.10.0",
+            coil              : "2.4.0",
+            gson              : "2.10.1",
+            navigation        : "2.6.0",
+            hilt              : "2.44",
+            dagger            : "2.44.2",
+            room_version      : "2.5.1",
+            hilt_compose      : "1.1.0-alpha01",
+            paging_runtime    : "3.1.1",
+            paging_compose    : "3.2.0-beta01",
+            mockito_core      : "5.3.1",
+            mockito_kotlin    : "5.0.0",
+            mockito_coroutines: "1.7.1",
+            turbine           : "0.11.0",
+            mockk             : "1.12.5",
+            coroutines        : "1.6.4",
+    ]
+
+    core = [
+            core_ktx: "androidx.core:core-ktx:${versions.core}"
+    ]
+
+    navigation = [
+            navigationCompose: "androidx.navigation:navigation-compose:${versions.navigation}",
+            navigationCommon : "androidx.navigation:navigation-common-ktx:${versions.navigation}",
+            navigationRuntime: "androidx.navigation:navigation-runtime-ktx:${versions.navigation}"
+    ]
+
+    debug = [
+            ui_tooling      : "androidx.compose.ui:ui-tooling:${versions.compose}",
+            ui_test_manifest: "androidx.compose.ui:ui-test-manifest:${versions.compose}"
+    ]
+
+    compose = [
+            compose_ui                : "androidx.compose.ui:ui:${versions.compose}",
+            compose_ui_graphics       : "androidx.compose.ui:ui-graphics:${versions.compose}",
+            compose_foundation        : "androidx.compose.foundation:foundation:${versions.compose}",
+            compose_ui_tooling_preview: "androidx.compose.ui:ui-tooling-preview:${versions.compose}",
+            compose_material3         : "androidx.compose.material3:material3:${versions.compose_material3}",
+            compose_material          : "androidx.compose.material:material:${versions.compose}"
+    ]
+
+    coil = [
+            core   : "io.coil-kt:coil:${versions.coil}",
+            compose: "io.coil-kt:coil-compose:${versions.coil}"
+    ]
+
+    retrofit = [
+            retrofit     : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+            converter    : "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
+            rxJavaAdapter: "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}"
+    ]
+
+    gson = [
+            gson: "com.google.code.gson:gson:${versions.gson}"
+    ]
+
+    okHttp = [
+            okHttp           : "com.squareup.okhttp3:okhttp:${versions.okHttp}",
+            okHttpBom        : "com.squareup.okhttp3:okhttp-bom:${versions.okHttp}",
+            logginInterceptor: "com.squareup.okhttp3:logging-interceptor:${versions.okHttp}"
+    ]
+
+    android_test = [
+            junit           : "androidx.test.ext:junit:${versions.android_test_junit}",
+            espresso_core   : "androidx.test.espresso:espresso-core:${versions.espresso_core}",
+            compose_ui_junit: "androidx.compose.ui:ui-test-junit4",
+    ]
+
+    android = [
+            app_compat       : "androidx.appcompat:appcompat:${versions.appcompat}",
+            lifecycle_runtime: "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycle}",
+            activity_compose : "androidx.activity:activity-compose:${versions.activity_compose}"
+    ]
+
+    compose_bom = [
+            compose_bom: "androidx.compose:compose-bom:${versions.compose_bom}"
+    ]
+
+    kotlin_bom = [
+            kotlin_bom: "org.jetbrains.kotlin:kotlin-bom:${versions.kotlin_bom}"
+    ]
+
+    hilt = [
+            hilt_compose : "androidx.hilt:hilt-navigation-compose:${versions.hilt_compose}",
+            hilt_android : "com.google.dagger:hilt-android:${versions.hilt}",
+            hilt_compiler: "com.google.dagger:hilt-compiler:${versions.hilt}"
+    ]
+
+    dagger_android = [
+            dagger          : "com.google.dagger:dagger-android:${versions.hilt}",
+            dagger_support  : "com.google.dagger:dagger-android-support:${versions.hilt}",
+            dagger_processor: "com.google.dagger:dagger-android-processor:${versions.hilt}"
+    ]
+
+    dagger_core = [
+            dagger         : "com.google.dagger:dagger:${versions.dagger}",
+            dagger_compiler: "com.google.dagger:dagger-compiler:${versions.dagger}"
+    ]
+
+    pagination = [
+            pagingRuntime: "androidx.paging:paging-runtime:${versions.paging_runtime}",
+            pagingCompose: "androidx.paging:paging-compose:${versions.paging_compose}"
+    ]
+
+    room = [
+            room_runtime : "androidx.room:room-ktx:${versions.room_version}",
+            room_compiler: "androidx.room:room-compiler:${versions.room_version}",
+            room_guava   : "androidx.room:room-guava:${versions.room_version}",
+            room_testing : "androidx.room:room-testing:${versions.room_version}",
+            room_paging  : "androidx.room:room-paging:${versions.room_version}"
+    ]
+
+    mockito = [
+            core      : "org.mockito:mockito-core:${versions.mockito_core}",
+            kotlin    : "org.mockito.kotlin:mockito-kotlin:${versions.mockito_kotlin}",
+            coroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.mockito_coroutines}"
+    ]
+
+    test = [
+            junit      : "junit:junit:${versions.junit}",
+            turbine    : "app.cash.turbine:turbine:${versions.turbine}",
+            mockk      : "io.mockk:mockk:${versions.mockk}",
+            mockk_agent: "io.mockk:mockk-agent-jvm:${versions.mockk}",
+    ]
+}
